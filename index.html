@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divine Warfare Prayers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Divine Warfare Prayers</h1>
+            <div class="date-navigation">
+                <span id="displayed-date" class="active-date"></span>
+            </div>
+        </header>
+
+        <div class="buttons">
+            <button id="today-btn">
+                <i class="fas fa-calendar-day"></i> Today's Prayer
+            </button>
+            <div class="date-picker-container">
+                <button id="date-picker-button" class="date-picker-button">
+                    <i class="fas fa-calendar-alt"></i> Choose Date
+                </button>
+                <div class="date-picker" id="date-picker">
+                    <div class="date-picker-header">
+                        <span class="date-picker-title" id="date-picker-month-year"></span>
+                        <div class="date-picker-nav">
+                            <button id="date-picker-prev"><i class="fas fa-chevron-left"></i></button>
+                            <button id="date-picker-next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="date-picker-weekdays">
+                        <div class="date-picker-weekday">Sun</div>
+                        <div class="date-picker-weekday">Mon</div>
+                        <div class="date-picker-weekday">Tue</div>
+                        <div class="date-picker-weekday">Wed</div>
+                        <div class="date-picker-weekday">Thu</div>
+                        <div class="date-picker-weekday">Fri</div>
+                        <div class="date-picker-weekday">Sat</div>
+                    </div>
+                    <div class="date-picker-days" id="date-picker-days"></div>
+                </div>
+            </div>
+            <button id="share-btn">
+                <i class="fas fa-share-alt"></i> Share
+            </button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading powerful prayers...</p>
+        </div>
+
+        <div class="error" id="error">
+            Failed to load prayers. Please check your connection.
+        </div>
+
+        <div class="success" id="success">
+            Prayers loaded successfully!
+        </div>
+
+        <div class="prayer-container" id="prayer-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
